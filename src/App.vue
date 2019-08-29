@@ -1,31 +1,34 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <!-- <router-link to="/">home</router-link>   |
+	<router-link to="/about">about</router-link>
+    <router-view/> -->
+	<blog-header></blog-header>
+	<!-- <add-blog></add-blog> -->
+	<!-- <show-blogs></show-blogs> -->
+	<router-view></router-view>
+	<!-- <Home></Home> -->
   </div>
 </template>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-#nav {
-  padding: 30px;
-}
+<script>
+	import AddBlog from "./components/AddBlog.vue"
+	import ShowBlogs from "./components/ShowBlogs.vue"
+	import BlogHeader from "./components/BlogHeader.vue"
+	import SingleBlog from "./components/SingleBlog.vue"
+	// import Home from "./views/Home.vue"
+	
+	export default {
+		name:"app",
+		components:{
+			AddBlog,
+			ShowBlogs,
+			BlogHeader,
+			SingleBlog,
+			// Home
+		}
+	}
+</script>
+<style scoped>
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
 </style>
